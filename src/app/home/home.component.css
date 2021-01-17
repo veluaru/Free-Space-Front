@@ -93,13 +93,13 @@ img{
     padding-left: 15px;
     padding-right: 15px;
     padding-top:20px;
-    padding-bottom:15px ;
+    padding-bottom:30px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background: rgb(218, 216, 224);
     font-family: sans-serif;
     border-radius: 5px;
     overflow: hidden;
-    max-width: 1300px;
+    max-width: 1200px;
     border: 1px rgb(214, 214, 226) solid;
     text-align: center;
   }
