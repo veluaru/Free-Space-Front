@@ -1,28 +1,43 @@
 <div id="center">
-    <h1 class="text-center">Asignador de espacio libre <img src="./../../assets/folder.png" alt=""></h1>
+  <h1 class="text-center">
+    Asignador de espacio libre <img src="./../../assets/folder.png" alt="" />
+  </h1>
 </div>
 
-
-<div class="blog-card">
+<form
+  #sendparams="ngForm"
+  (ngSubmit)="onSubmit(sendparams.value)"
+  ngNativeValidate
+>
+  <div class="blog-card">
     <div>
-        <h2>Ingrese los parámetros aqui:</h2>
-        <input type="text" id="fname" placeholder="Ejemplo -S 100 -b 1000 -H 4 -a 4 -l ADDRSORT -p BEST -n 5 -c">
-        <p>Ejemplo de sintaxis: -S 100 -b 1000 -H 4 -a 4 -l ADDRSORT -p BEST -n 5 -c</p>
+      <h2>Ingrese los parámetros aqui:</h2>
+      <input
+        type="text"
+        id="fname"
+        name="params"
+        placeholder="Ejemplo -S 100 -b 1000 -H 4 -a 4 -l ADDRSORT -p BEST -n 5 -c"
+        [(ngModel)]="params"
+      />
+      <p>
+        Ejemplo de sintaxis: -S 100 -b 1000 -H 4 -a 4 -l ADDRSORT -p BEST -n 5
+        -c
+      </p>
     </div>
     <div>
-        <button class="button">Asignar memoria</button>
+      <button class="button" value="submit" type="submit">
+        Asignar memoria
+      </button>
     </div>
 
-    <hr class="style1">
+    <hr class="style1" />
 
     <div class="row">
-        <h2>Resultados</h2>
-        <div class="column">
-            <textarea disabled></textarea>
-        </div>
-        <div class="column">
-            <textarea disabled></textarea>
-        </div>
+      <h2>Resultados</h2>
+      <div class="column">
+        <textarea disabled>{{ response }}</textarea>
+      </div>
     </div>
-</div>
-<br>
+  </div>
+</form>
+<br />

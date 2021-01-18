@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Espacio-Libre-Front"
+  "defaultProject": "Espacio-Libre-Front",
+  "cli": {
+    "analytics": "7409e12d-bfdf-4594-b5cf-b9ba82926b36"
+  }
 }

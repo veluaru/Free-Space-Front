@@ -19,8 +19,8 @@ textarea {
     resize: none;
   }
   .column {
-    float: left;
-    width: 50%;
+    width: 80%;
+    margin:auto;
   }
   
   /* Clear floats after the columns */
