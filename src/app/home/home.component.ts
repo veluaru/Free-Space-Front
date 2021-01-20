@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http'
 export class HomeComponent implements OnInit {
   response= ''
   params= ''
+  str=''
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
   onSubmit(formData: String){
     console.log(formData)
      this.http.get<any>("http://localhost:8000/"+this.params).subscribe(formData => {
-       this.response = formData;
+       this.str = formData.replaceAll(/,/g, '\n');
+       this.response = this.str.replace(/{|}|'solve':|'/g,'');
        console.log("response", this.response)
     },error => this.response = error);
   }
